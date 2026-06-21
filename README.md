@@ -1,4 +1,4 @@
-# BadBuilder (Linux port)
+# BadBuilder (Linux port) - by Claude
 
 A Python port of [Pdawg's BadBuilder](https://github.com/Pdawg-bytes/BadBuilder),
 which downloads, extracts, and lays out an Xbox 360 BadUpdate exploit USB
@@ -37,30 +37,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-(Optional, recommended) Set a GitHub token to avoid the 60 requests/hour
-anonymous API rate limit:
-
-```bash
-export GITHUB_TOKEN=ghp_yourtokenhere
-```
-
 ## Usage
 
 ```bash
 python3 main.py
 ```
 
-You'll be prompted for:
-1. The mount path of your already-FAT32-formatted USB drive.
-2. Which required files you already have locally (skips re-downloading).
-3. Which program (FreeMyXe or XeUnshackle) BadUpdate should launch.
-4. Optionally, any homebrew apps to add (point it at the app's root folder;
-   it auto-detects the `.xex` entry point, or asks if there's more than one).
-
-> [!CAUTION]
-> This writes directly into your USB drive's mount path and will overwrite
-> existing files with matching names. Double check the mount path before
-> confirming.
 
 ## Project layout
 
